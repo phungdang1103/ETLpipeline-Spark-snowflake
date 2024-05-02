@@ -14,7 +14,7 @@ from airflow.providers.amazon.aws.sensors.emr import EmrJobFlowSensor, EmrStepSe
 job_flow_overrides = {
     "Name": "redfin_emr_cluster",
     "ReleaseLabel": "emr-6.13.0",
-    "Applications": [{"Name": "Spark"}, {"Name": "JupyterEnterpriseGateway"}],
+    "Applications": [{"Name": "Spark"}],
     "LogUri": "s3://redfin-data-project1-yml/redfin-emr-logs-yml/",
     "VisibleToAllUsers":False,
     "Instances": {
