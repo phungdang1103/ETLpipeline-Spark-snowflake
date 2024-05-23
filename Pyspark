@@ -27,7 +27,7 @@ def transform_date():
     # Drop period_end and last_updated columns
     df_redfin = df_redfin.drop("period_end", "last_updated")
 
-    #let's map the month number to their respective month name.
+    # map the month number to their respective month name.
 
     df_redfin = df_redfin.withColumn("period_end_month", 
                     when(col("period_end_month") == 1, "January")
